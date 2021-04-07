@@ -89,4 +89,8 @@ function keyPressed(){
 	Matter.Body.setStatic(packageBody,false);
     }
 }
+if (keyCode === LEFT){
+		helicopterSprite.x = helicopterSprite.x 20;
+		Matter.Body.translate(packageBody , {x:-20 ,y:0})
+	}
 
