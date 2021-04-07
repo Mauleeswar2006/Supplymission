@@ -74,7 +74,7 @@ function draw() {
   packageSprite.x= packageBody.position.x ;
   packageSprite.y= packageBody.position.y ;
 
-  Matter.Body.translate(packageBody , {x:-20 ,y:0})
+  
   
   drawSprites();
   
@@ -82,10 +82,11 @@ function draw() {
 function keyPressed(){
 	if (keyCode === LEFT){
 		helicopterSprite.x = helicopterSprite.x -20;
+		Matter.Body.translate(packageBody , {x:-20 ,y:0})
 	}
 
     if (keyCode === DOWN){
-	Matter.Body.setStactic(packageBody,false);
+	Matter.Body.setStatic(packageBody,false);
     }
 }
 
